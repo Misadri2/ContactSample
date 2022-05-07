@@ -30,7 +30,7 @@ namespace ContactSample.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAsync([Bind("Name,Email,Phone,Comments")] ContactFormModel model)
         {
-            model.IP = Common.ResolveIPAdress(HttpContext);
+            model.IP = Common.ResolveIPAddress(HttpContext);
             await _contactQueueService.AddAsync(model, _configuration["SendMailQueueUrl"]);
             _logger.LogInformation($"Contact added to queue. {model.LogSerialized}");
             return RedirectToAction("Index");

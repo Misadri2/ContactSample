@@ -1,0 +1,14 @@
+{
+  "Logging": {
+    "Region": "sa-east-1",
+    "LogGroup": "ContactSample",
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "AplicationName": "ContactSample",
+  "SendMailQueueUrl": "https://sqs.sa-east-1.amazonaws.com/123456/Contact"
+}
