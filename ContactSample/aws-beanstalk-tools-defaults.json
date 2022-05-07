@@ -1,14 +1,32 @@
+
 {
-  "Logging": {
-    "Region": "sa-east-1",
-    "LogGroup": "ContactSample",
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "AplicationName": "ContactSample",
-  "SendMailQueueUrl": "https://sqs.sa-east-1.amazonaws.com/123456/Contact"
+    "Logging" : {
+        "Region" : "sa-east-1",
+        "LogGroup" : "ContactSample",
+        "LogLevel" : {
+            "Default" : "Information",
+            "Microsoft" : "Warning",
+            "Microsoft.Hosting.Lifetime" : "Information"
+        }
+    },
+    "AllowedHosts" : "*",
+    "AplicationName" : "ContactSample",
+    "SendMailQueueUrl" : "http://contactsample-dev.sa-east-1.elasticbeanstalk.com/",
+    "region"           : "sa-east-1",
+    "configuration"    : "Debug",
+    "framework"        : "netcoreapp3.1",
+    "self-contained"   : false,
+    "application"      : "ContactSample",
+    "environment"      : "ContactSample-dev",
+    "enable-xray"      : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.3.1 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "contactsample-dev",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
 }
