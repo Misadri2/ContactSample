@@ -1,11 +1,8 @@
 ﻿using ContactSample.Models;
+using ContactSample.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ContactSample.Controllers
@@ -14,9 +11,9 @@ namespace ContactSample.Controllers
     {
         private readonly ILogger<ContactController> _logger;
         private IConfiguration _configuration;
-        private IContactQueueService _contactQueueService;
+        private ContactQueueService _contactQueueService;
 
-        public ContactController(ILogger<ContactController> logger, IConfiguration configuration, IContactQueueService contactQueueService)
+        public ContactController(ILogger<ContactController> logger, IConfiguration configuration, ContactQueueService contactQueueService)
         {
             _logger = logger;
             _configuration = configuration;
