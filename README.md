@@ -1,10 +1,10 @@
 ## App name: ContactSample
 
-### Project using .Net Core (MVC) on AWS with Visual Studio.
+#### Project using .Net Core (MVC) on AWS with Visual Studio.
 
-### AWS Services used in this project : SQS, Database Dynamo.
+#### AWS Services used in this project : SQS, Database Dynamo.
 
-### Using interface (MVC) to save data on Dynamo(AWS).
+#### Using interface (MVC) to save data on Dynamo(AWS).
 ##### Backend - done | Frontend - developing
 
 <p align="left">
