@@ -19,12 +19,12 @@ namespace ContactSample.Services
             _logger = logger;
         }
 
-        public async Task<bool> AddAsync(ContactFormModel contactForm, string sendMailQueueUrl)
+        public async Task<bool> AddAsync(string contactId, string sendMailQueueUrl)
         {
             var sendRequest = new SendMessageRequest
             {
                 QueueUrl = sendMailQueueUrl,
-                MessageBody = $"{{ 'ContactForm ' : { JsonConvert.SerializeObject(contactForm) } }}"
+                MessageBody = $"{{ 'ContactForm ' : { JsonConvert.SerializeObject(contactId) } }}"
             };
 
             var response = await _sqsClient.SendMessageAsync(sendRequest);

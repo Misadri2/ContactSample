@@ -47,6 +47,8 @@ namespace ContactSample
 
             //Add Application Services
             services.AddTransient<ContactQueueService>();
+            services.AddTransient<ContactService>();
+            services.AddTransient<ContactDbService>();
 
         }
 
